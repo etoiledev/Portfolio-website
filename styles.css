@@ -1,0 +1,615 @@
+/* Import Parisian Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+
+
+/*CSS VARIABLES - Color Palette*/
+:root {
+  --deep-oak: #320010;
+  --cabernet: #490018;
+  --vanilla: #ffe6d1;
+  --almond: #9d806e;
+  --gold: #d4af37;
+  --gold-glow: rgba(212, 175, 55, 0.6);
+}
+
+/* GLOBAL RESET & BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #010B15;
+  color: var(--deep-oak);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION - LEFT-SIDE EIFFEL TOWER */
+.nav-tower {
+  position: fixed;
+  top: 0px;
+  bottom: 30px;
+  z-index: 998;
+  width: 220px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-tower img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-tower:hover img {
+  filter: drop-shadow(0 0 20px var(--gold));
+  transition: 0.3s ease-out;
+}
+
+/* Navigation labels on hover */
+.nav-labels {
+  position: absolute;
+  left: 150px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.nav-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  text-align: center;
+  color: var(--cabernet);
+  background: var(--vanilla);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-tower:hover .nav-label {
+  opacity: 1;
+}
+
+.nav-arrows {
+    position: absolute;
+    left: 110px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    pointer-events: none;
+}
+
+.nav-arrows .arrow {
+    font-size: 20px;
+    color: #FDEBD2;
+    text-shadow: 0px 0px 3px #000000;
+    opacity: 0;
+    animation: arrowGlow 1.2s infinite alternate ease-in-out;
+}
+
+.nav-tower:hover .nav-arrows .arrow {
+    opacity: 1;
+}
+
+/* MAIN CONTENT AREA */
+main {
+  margin-left: 220px;
+  margin-right: 0px;
+  padding: 0;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--deep-oak);
+  color: var(--vanilla);
+  text-align: center;
+  padding: 11px;
+  font-family: 'Playfair Display', serif;
+  font-size: 10px;
+  z-index: 1000;
+}
+
+
+/* ABOUT PAGE - CAFÉ CHALKBOARD THEME */
+
+/* GIF Background */
+
+.gif-container {
+  position: relative;
+  min-height: 650px;        
+  display: flex;             
+  justify-content: center;   
+  align-items: center;       
+  padding: 0 20px;           
+}
+
+.gif-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('./coffeeshop.gif') center/cover no-repeat;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+/* Chalkboard */
+.chalkboard {
+  background: #2b2b2b;
+  border: 8px solid #3a2f0b;
+  border-radius: 12px;
+  padding: 20px;
+  width: 40%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  z-index: 5;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.chalkboard h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.divider {
+  width: 90%;
+  border-bottom: 3px dashed white; 
+  margin: 1rem auto;
+}
+
+.chalkboard-text p {
+  color: white;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Polaroid Photo Frame */
+.text-center {
+  text-align: center;
+}
+
+.polaroid {
+  display: inline-block;
+  background: white;
+  padding: 10px;
+  padding-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+  margin: 20px;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.polaroid img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+/* SKILLS PAGE - PARIS METRO THEME */
+.metro-line-wrapper {
+  background: url("metro.gif") center/cover no-repeat;
+  background-attachment: fixed;
+  will-change: background-position;
+  transform: translateZ(0);
+}
+
+.metro-line {
+  position: relative;
+  padding: 80px 40px;
+  min-height: 650px;
+  text-align: center;
+}
+
+/* Title */
+.metro-line h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--cabernet);
+  text-align: center;
+  margin-bottom: 60px;
+
+  background: var(--vanilla);
+  padding: 20px 40px;
+  border-radius: 20px;
+  border: 6px solid var(--cabernet);
+  display: inline-block;
+  
+}
+
+/* Metro Track */
+.metro-track {
+  position: absolute;
+  top: 300px;        
+  left: 5%;          
+  width: 90%;        
+  height: 8px;
+  background: var(--cabernet);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Metro Stops */
+.metro-stops {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Individual Stop */
+.metro-stop {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stop-circle {
+  width: 120px;
+  height: 120px;
+  background: var(--vanilla);
+  border: 6px solid var(--cabernet);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--deep-oak);
+  margin: 0 auto 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stop-circle:hover {
+  transform: scale(1.15);
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 30px var(--gold-glow);
+}
+
+/* Drop-Down Details */
+.stop-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 0 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.metro-stop:hover .stop-details {
+  max-height: 300px;
+  opacity: 1;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.stop-details h3 { 
+  font-family: 'Playfair Display', serif; 
+  font-size: 20px; 
+  color: var(--cabernet); 
+  margin-bottom: 10px; 
+}
+
+.stop-details ul {
+  list-style: none; 
+  padding: 0; 
+} 
+
+.stop-details li { 
+  font-size: 16px; 
+  color: var(--deep-oak); 
+  padding: 5px 0; 
+  border-bottom: 1px solid var(--almond); 
+} 
+
+.stop-details li:last-child { 
+  border-bottom: none; 
+}
+
+/* PROJECTS PAGE- PALACE GALLERY THEME */
+
+.museum-wrapper {
+    margin-left: 220px;          
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    align-items: center;
+}
+
+/* Museum image area */
+.museum-container {
+    position: relative;
+    text-align: center;
+    width: 100%;           
+}
+
+.museum-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Museum frame-style labels */
+.label {
+    position: absolute;
+    background: #d8b32a;
+    color: var(--deep-oak);
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    box-shadow: 4px 6px 12px rgba(0,0,0,0.25);
+    transform-origin: center;
+    transition: 0.2s ease;
+    font-family: "Playfair Display", serif;
+    border: 2px solid #cfa50c;
+}
+
+.label-left {
+    transform: rotate(30deg);
+}
+
+.label-right {
+    transform: rotate(-30deg);
+}
+
+/* Hover effect */
+.label:hover {
+    background: #d8b32a;
+    transform: scale(1.08);
+}
+
+/* Project description sections */
+.project-section {
+    width: 60%;
+    margin: 40px auto;
+    background: #fff6e9;
+    padding: 25px;
+    border-left: 6px solid var(--cabernet);
+    border-radius: 10px;
+    color: var(--deep-oak);
+}
+
+.view-project {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: var(--cabernet);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.view-project:hover {
+    transform: scale(1.08);
+}
+
+
+/* CONTACT PAGE - POSTCARD THEME */
+
+/* Contact Container - Postcard with margins */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;           
+    max-width: 1200px;    
+    min-height: 80vh;     
+    margin: 40px 20px 10px 220px; 
+    padding: 20px;        
+    box-sizing: border-box;
+    background-image: url('postcard.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+/* Left & Right Sections */
+.left, .right {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    color: var(--cabernet);
+}
+
+/* Left Form */
+.left h2 {
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 70%;
+    padding: 12px;
+    margin: 10px 150px;
+    background: rgba(255,255,255,0.2);  /* transparent */
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 6px;
+    color: var(--cabernet);
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--cabernet);
+    opacity: 0.8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--cabernet);
+    background: rgba(255,255,255,0.3);
+}
+
+.contact-form button {
+    background-color: var(--cabernet);
+    color: var(--vanilla);
+    margin-left: 220px;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    filter: drop-shadow(0 0 20px var(--gold-glow));
+}
+
+/* Right Info Section */
+.right {
+    width: 50%;
+    padding-left: 80px;
+    padding-top: 170px;
+}
+
+.right h2 {
+    margin-left: 40px;
+    font-size: 24px;
+    margin-bottom: 6px;
+    color: var(--cabernet);
+}
+
+.contact-info {
+    margin-top: 4px;
+    line-height: 40px;  
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cabernet);
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.social-icons {
+    margin-top: 4px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+}
+
+/* RESUME PAGE - NEWSPAPER THEME */
+.newspaper {
+  background: var(--vanilla);
+  border: 1px solid var(--almond);
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-bottom: 60px;
+  margin-left: 30px;
+}
+
+.newspaper-header {
+  text-align: center;
+  border-bottom: 3px double var(--deep-oak);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.newspaper-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--deep-oak);
+  margin-bottom: 10px;
+}
+
+.newspaper-header p {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--almond);
+  font-style: italic;
+}
+
+.newspaper-content {
+  columns: 2;
+  column-gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.resume-section {
+  break-inside: avoid;
+  margin-bottom: 30px;
+}
+
+.resume-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: var(--cabernet);
+  border-bottom: 2px solid var(--cabernet);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.resume-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--deep-oak);
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.resume-section p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--deep-oak);
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.resume-section ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.resume-section li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--deep-oak);
+  margin-bottom: 8px;
+}
+

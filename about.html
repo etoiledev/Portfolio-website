@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation - Left Side Eiffel Tower with Image Map -->
+    <nav class="nav-tower">
+        <img src="\eiffel.png" alt="Navigation" usemap="#nav-map">
+        <map name="nav-map">
+            <!-- Top Antenna - Home -->
+            <area shape="rect" coords="0,0,180,120" href="index.html" alt="Home">
+            <!-- Upper Tier Upper Half - About Me -->
+            <area shape="rect" coords="0,120,180,200" href="about.html" alt="About Me">
+            <!-- Upper Tier Lower Half - Skills -->
+            <area shape="rect" coords="0,200,180,280" href="skills.html" alt="Skills">
+            <!-- Middle Tier - Projects -->
+            <area shape="rect" coords="0,280,180,400" href="projects.html" alt="Projects">
+            <!-- Lower Base - Contact -->
+            <area shape="rect" coords="0,400,180,480" href="contact.html" alt="Contact Me">
+            <!-- Ground - Resume -->
+            <area shape="rect" coords="0,480,180,700" href="resume.html" alt="Resume">
+        </map>
+        
+        <div class="nav-labels">
+            <span class="nav-label">Home</span>
+            <span class="nav-label">About Me</span>
+            <span class="nav-label">Skills</span>
+            <span class="nav-label">Projects</span>
+            <span class="nav-label">Contact Me</span>
+            <span class="nav-label">Resume</span>
+        </div>
+
+        <div class="nav-arrows">
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+        </div>
+
+    </nav>
+
+    <!-- Main Content - Café Chalkboard Theme -->
+    <main>
+        <div class="gif-container">
+            <div class="chalkboard">
+                <h2>About Me</h2>
+
+                <div class="text-center">
+                    <div class="polaroid">
+                        <img src="Mihika.jpg" alt="Mihika Rohatgi">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="chalkboard-text">
+                    <div class="chalkboard-text">
+                        <p>🗼First-year B.Tech CSE student at IGDTUW</p>
+                        <p>☕ Curious & creative — brewing ideas with logic & innovation</p>
+                        <p>🥐 Exploring: Software Development, AI, ML</p>
+                        <p>🍰 Building strong foundation in programming & problem-solving</p>
+                        <p>🥖 Teamwork, leadership & communication skills</p>
+                        <p>🥂 Future goals: projects, hackathons, internships & open-source contributions</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Mihika Rohatgi| Inspired by Paris| Built with passion</p>
+    </footer>
+</body>
+</html>

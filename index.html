@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header - Top Right Corner -->
+    <header class="header">
+        <h1>Mihika Rohatgi</h1>
+        <p>B.Tech CSE (1st Year)</p>
+    </header>
+
+    <!-- Navigation - Left Side Eiffel Tower with Image Map -->
+    <nav class="nav-tower">
+        <img src="\eiffel.png" alt="Navigation" usemap="#nav-map">
+        <map name="nav-map">
+            <!-- Top Antenna - Home -->
+            <area shape="rect" coords="0,0,180,120" href="index.html" alt="Home">
+            <!-- Upper Tier Upper Half - About Me -->
+            <area shape="rect" coords="0,120,180,200" href="about.html" alt="About Me">
+            <!-- Upper Tier Lower Half - Skills -->
+            <area shape="rect" coords="0,200,180,280" href="skills.html" alt="Skills">
+            <!-- Middle Tier - Projects -->
+            <area shape="rect" coords="0,280,180,400" href="projects.html" alt="Projects">
+            <!-- Lower Base - Contact -->
+            <area shape="rect" coords="0,400,180,480" href="contact.html" alt="Contact Me">
+            <!-- Ground - Resume -->
+            <area shape="rect" coords="0,480,180,700" href="resume.html" alt="Resume">
+        </map>
+        
+        <div class="nav-labels">
+            <span class="nav-label">Home</span>
+            <span class="nav-label">About Me</span>
+            <span class="nav-label">Skills</span>
+            <span class="nav-label">Projects</span>
+            <span class="nav-label">Contact Me</span>
+            <span class="nav-label">Resume</span>
+        </div>
+
+        <div class="nav-arrows">
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+        </div>
+
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="home-content">
+            <div class="video-container">
+                <video autoplay loop muted playsinline>
+                    <source src="home.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h2>Welcome to My Paris-Themed Portfolio</h2>
+            <p>
+                Bonjour! I am Mihika Rohatgi, a first year B.Tech CSE student. This portfolio showcases my skills and projects.
+            </p>
+            <p>
+                Let the Eiffel Tower be your map — every tier unlocks a new part of my story✨.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Mihika Rohatgi| Inspired by Paris| Built with passion</p>
+    </footer>
+</body>
+</html>

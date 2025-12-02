@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation - Left Side Eiffel Tower with Image Map -->
+    <nav class="nav-tower">
+        <img src="\eiffel.png" alt="Navigation" usemap="#nav-map">
+        <map name="nav-map">
+            <!-- Top Antenna - Home -->
+            <area shape="rect" coords="0,0,180,120" href="index.html" alt="Home">
+            <!-- Upper Tier Upper Half - About Me -->
+            <area shape="rect" coords="0,120,180,200" href="about.html" alt="About Me">
+            <!-- Upper Tier Lower Half - Skills -->
+            <area shape="rect" coords="0,200,180,280" href="skills.html" alt="Skills">
+            <!-- Middle Tier - Projects -->
+            <area shape="rect" coords="0,280,180,370" href="projects.html" alt="Projects">
+            <!-- Lower Base - Contact -->
+            <area shape="rect" coords="0,370,180,440" href="contact.html" alt="Contact Me">
+            <!-- Ground - Resume -->
+            <area shape="rect" coords="0,440,180,700" href="resume.html" alt="Resume">
+        </map>
+        
+        <div class="nav-labels">
+            <span class="nav-label">Home</span>
+            <span class="nav-label">About Me</span>
+            <span class="nav-label">Skills</span>
+            <span class="nav-label">Projects</span>
+            <span class="nav-label">Contact Me</span>
+            <span class="nav-label">Resume</span>
+        </div>
+
+        <div class="nav-arrows">
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+        </div>
+
+    </nav>
+
+    <!-- Main Palace Gallery -->
+    <div class="museum-wrapper">
+
+        <div class="museum-container">
+            <img src="museum.jpeg" alt="Museum Hallway" class="museum-image">
+
+            <!-- Left wall labels -->
+            <a href="#p1" class="label label-left" style="top: 40%; left: 11%;">Pet Shop</a>
+            <a href="#p2" class="label label-left" style="top: 56%; left: 20%;">Streakly</a>
+            <a href="#p3" class="label label-left" style="top: 70%; left: 29%;">Yojana Mitra</a>
+
+            <!-- Right wall labels -->
+            <a href="#p4" class="label label-right" style="top: 38%; right: 9%;">EduMatrix</a>
+            <a href="#p5" class="label label-right" style="top: 54%; right: 18%;">E-Collect</a>
+            <a href="#p6" class="label label-right" style="top: 68%; right: 27%;">StyleBae</a>
+        </div>
+    </div>
+
+    <!-- PROJECT SECTIONS BELOW -->
+    <div class="project-section" id="p1"><h3>Pet Shop Management System</h3>
+        <p>The Pet Shop Management System is a user-friendly platform built using Python and MySQL that simplifies daily operations for both administrators and customers. Admins can manage the pet table, pet items, and pet day care service details, as well as track sales and customer data for better business insights. Customers can browse available pets, shop for pet items, and explore day care options through a simple interface. They can also make purchases, generate invoices, and use the built-in help feature to ask questions. Overall, the system streamlines management tasks while improving the shopping experience, making it highly efficient and convenient for any pet shop.</p>
+        <a href="https://github.com/mihikarohatgi" target="_blank" class="view-project">View Project →</a>
+    </div>
+    <div class="project-section" id="p2"><h3>Streakly</h3>
+        <p>Streakly, a Smart Habit Tracker App is an all-in-one wellness and productivity platform designed to build healthy routines through real-time insights and motivating features. It enables users to set clear action plans, track daily, weekly, and monthly streaks, and stay consistent with reminders for stretching, hydration, medication, and hygiene. The app includes food and exercise tracking, focus mode with app-blocking, floating timers, meditation music, and screen-time limits. Users earn badges, view progress, celebrate milestones, and connect globally with friends. With voice assistance, weather and calendar integration, and location-based prompts, the app supports data-driven lifestyle improvement for everyone, including visually impaired users.</p>
+        <a href="https://github.com/mihikarohatgi" target="_blank" class="view-project">View Project →</a>
+    </div>
+    <div class="project-section" id="p3"><h3>Yojana Mitra</h3>
+        <p>Yojana Mitra is an inclusive welfare scheme and subsidy eligibility platform designed to ensure that citizens, especially individuals from underserved communities, can easily access government benefits. Motivated by widespread unawareness and missed opportunities, the system provides consolidated access to schemes, a smart eligibility checker, scholarship information, offline and local assistance, and a personalized user dashboard. The application is built using HTML and CSS for the frontend, Python with the Flask framework for backend processing, MySQL for structured data management, and integrates securely with government APIs such as DigiLocker. Developed with a scalable client–server architecture, the project is supported by a feasible implementation plan, risk-mitigation strategies, and a roadmap featuring multilingual support, AI-based recommendations, and in-app tracking.</p>
+        <a href="https://github.com/mihikarohatgi" target="_blank" class="view-project">View Project →</a>
+    </div>
+    <div class="project-section" id="p4"><h3>EduMatrix</h3>
+        <p>EduMatrix is a Student Management and Analysis System is a structured C application engineered to acquire, store, and process academic datasets for multiple students. It utilizes parallel arrays to maintain records such as enrollment numbers, names, subject scores, and attendance. Core logic is modularized through user-defined functions for grade computation, percentage calculation, and feedback generation. Iterative loops manage bulk data input, while conditional branching supports performance evaluation and remark assignment. The program outputs formatted report cards detailing totals, averages, grades, attendance analysis, and subject-specific recommendations. Overall, the system demonstrates efficient data handling and logical computation.</p>
+        <a href="https://github.com/mihikarohatgi" target="_blank" class="view-project">View Project →</a>
+    </div>
+    <div class="project-section" id="p5"><h3>E-Collect</h3>
+        <p>This platform is a comprehensive e-waste management website designed to streamline collection, tracking, and responsible recycling. Along with user accounts, scheduling tools, pickup logs, and real-time status dashboards, it features API-powered GPS integration and Google Maps routing to help collectors navigate efficiently. Users can request pickups, classify e-waste types, and monitor progress, while administrators manage fleets, assign tasks, and verify delivery at authorized recycling plants. The system ensures safe handling of hazardous components and supports rare-metal recovery by directing waste to certified processors. With automation, smart alerts, and data analytics, it enables a cleaner, sustainable e-waste cycle.</p>
+        <a href="https://github.com/mihikarohatgi" target="_blank" class="view-project">View Project →</a>
+    </div>
+    <div class="project-section" id="p6"><h3>StyleBae</h3
+        ><p>StyleBae is an AI-powered fashion emergency assistant designed to provide instant solutions for last-minute style dilemmas. From outfit coordination and accessory replacements to quick hairstyles, makeup hacks with limited products, and footwear pairing, it covers all aspects of personal styling. Leveraging AI and AR, users can virtually try hairstyles, makeup, and outfit combinations, while receiving weather-appropriate, event-specific, and sustainable fashion suggestions. The platform also offers DIY hacks, emergency shopping options, and confidence-boosting recommendations. By learning user preferences over time, StyleMate ensures personalized, practical, and creative solutions, making it the ultimate companion for effortless, stylish, and resourceful fashion decision-making.</p>
+        <a href="https://github.com/mihikarohatgi" target="_blank" class="view-project">View Project →</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Mihika Rohatgi| Inspired by Paris| Built with passion</p>
+    </footer>
+</body>
+</html>

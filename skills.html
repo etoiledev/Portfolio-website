@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation - Left Side Eiffel Tower with Image Map -->
+    <nav class="nav-tower">
+        <img src="\eiffel.png" alt="Navigation" usemap="#nav-map">
+        <map name="nav-map">
+            <!-- Top Antenna - Home -->
+            <area shape="rect" coords="0,0,180,120" href="index.html" alt="Home">
+            <!-- Upper Tier Upper Half - About Me -->
+            <area shape="rect" coords="0,120,180,200" href="about.html" alt="About Me">
+            <!-- Upper Tier Lower Half - Skills -->
+            <area shape="rect" coords="0,200,180,280" href="skills.html" alt="Skills">
+            <!-- Middle Tier - Projects -->
+            <area shape="rect" coords="0,280,180,370" href="projects.html" alt="Projects">
+            <!-- Lower Base - Contact -->
+            <area shape="rect" coords="0,370,180,440" href="contact.html" alt="Contact Me">
+            <!-- Ground - Resume -->
+            <area shape="rect" coords="0,440,180,700" href="resume.html" alt="Resume">
+        </map>
+        
+        <div class="nav-labels">
+            <span class="nav-label">Home</span>
+            <span class="nav-label">About Me</span>
+            <span class="nav-label">Skills</span>
+            <span class="nav-label">Projects</span>
+            <span class="nav-label">Contact Me</span>
+            <span class="nav-label">Resume</span>
+        </div>
+
+        <div class="nav-arrows">
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+            <div class="arrow">⪻---</div>
+        </div>
+
+    </nav>
+
+    <!-- Main Content - Paris Metro Theme -->
+    <main>
+        <div class="metro-line-wrapper">
+            <div class="metro-line">
+                <h2>Technical Skills</h2>
+                
+                <!-- Metro Track -->
+                <div class="metro-track"></div>
+                
+                <!-- Metro Stops -->
+                <div class="metro-stops">
+                    <!-- Stop 1: Front-End -->
+                    <div class="metro-stop">
+                        <div class="stop-circle">
+                            Front-End
+                        </div>
+                        <div class="stop-details">
+                            <h3>Front-End Development</h3>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Stop 2: Back-End -->
+                    <div class="metro-stop">
+                        <div class="stop-circle">
+                            Back-End
+                        </div>
+                        <div class="stop-details">
+                            <h3> Back-End Development</h3>
+                            <ul>
+                                <li>C Programming</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Stop 3: Tools -->
+                    <div class="metro-stop">
+                        <div class="stop-circle">
+                            Tools
+                        </div>
+                        <div class="stop-details">
+                            <h3>Development Tools</h3>
+                            <ul>
+                                <li>VS Code</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Stop 4: UI/UX -->
+                    <div class="metro-stop">
+                        <div class="stop-circle">
+                            UI/UX
+                        </div>
+                        <div class="stop-details">
+                            <h3>Design & Creativity</h3>
+                            <ul>
+                                <li>Canva</li>
+                                <li>Figma</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Mihika Rohatgi| Inspired by Paris| Built with passion</p>
+    </footer>
+</body>
+</html>
